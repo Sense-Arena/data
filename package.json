@@ -1,6 +1,6 @@
 {
   "name": "@sensearena/data",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": {
     "build": "microbundle --tsconfig tsconfig.json --no-sourcemap --compress"
   },
