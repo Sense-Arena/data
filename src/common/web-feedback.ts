@@ -167,4 +167,5 @@ export const webFeedback = {
   saOftenOps,
   monthOps,
   whoIsUserOps,
+  planOftenOps,
 };
