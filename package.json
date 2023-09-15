@@ -1,0 +1,27 @@
+{
+  "name": "@sensearena/data",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "microbundle --tsconfig tsconfig.json --no-sourcemap --compress"
+  },
+  "devDependencies": {
+    "microbundle": "0.15.1",
+    "tslib": "2.6.2",
+    "typescript": "5.2.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "source": "src/index.ts",
+  "main": "./dist/@sa-data.js",
+  "umd:main": "./dist/@sa-data.umd.js",
+  "module": "./dist/@sa-data.module.js",
+  "exports": {
+    ".": {
+      "import": "./dist/@sa-data.es.js",
+      "require": "./dist/@sa-data.umd.js"
+    }
+  }
+}
