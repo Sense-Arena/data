@@ -52,7 +52,7 @@ const height = [
     value: 185,
   },
   {
-    title: `190 & more (6'3" & more)`,
+    title: `190-210cm (6'3"-7")`,
     value: 195,
   },
 ];
