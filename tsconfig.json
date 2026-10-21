@@ -1,22 +1,23 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    // Active consumers: Next.js 15/16 and Vite 8 projects running on Node.js 24.
+    "target": "ES2022",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "ES2022"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "outDir": "./dist",
-    "moduleResolution": "node",
+    "outDir": "./dist/.build",
+    "declarationDir": "./dist",
+    "rootDir": "./src",
+    "moduleResolution": "bundler",
+    "types": [],
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true,
+    "noEmitOnError": true,
     "declaration": true
   },
   "include": [
