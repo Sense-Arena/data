@@ -1,4 +1,4 @@
-import { Backhand, HockeyPosition, HockeyStick, Shoot } from './enums';
+import { Backhand, HockeyPosition, HockeyStick, Shoot } from './enums.js';
 
 const backhand = [
   {

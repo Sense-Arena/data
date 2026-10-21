@@ -1,13 +1,20 @@
 {
   "name": "@sensearena/data",
-  "version": "0.1.4",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sense-Arena/data.git"
+  },
   "scripts": {
-    "build": "microbundle --tsconfig tsconfig.json --no-sourcemap --compress"
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run typecheck && node --test test/package.test.cjs",
+    "prepack": "npm run build"
   },
   "devDependencies": {
-    "microbundle": "0.15.1",
-    "tslib": "2.6.2",
-    "typescript": "5.2.2"
+    "rollup": "4.64.12",
+    "typescript": "7.0.2"
   },
   "files": [
     "dist"
@@ -17,11 +24,13 @@
   "source": "src/index.ts",
   "main": "./dist/@sa-data.js",
   "umd:main": "./dist/@sa-data.umd.js",
-  "module": "./dist/@sa-data.module.js",
+  "module": "./dist/@sa-data.module.mjs",
   "exports": {
     ".": {
-      "import": "./dist/@sa-data.es.js",
-      "require": "./dist/@sa-data.umd.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/@sa-data.modern.mjs",
+      "require": "./dist/@sa-data.js",
+      "default": "./dist/@sa-data.modern.mjs"
     }
   }
 }

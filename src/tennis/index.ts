@@ -1,3 +1,3 @@
-export * from './enums';
-export * from './self-care';
-export * from './web-feedback';
+export * from './enums.js';
+export * from './self-care.js';
+export * from './web-feedback.js';

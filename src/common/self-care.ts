@@ -1,5 +1,5 @@
-import { UserGender, UserHand } from './enums';
-import { objKeys } from './utils';
+import { UserGender, UserHand } from './enums.js';
+import { objKeys } from './utils.js';
 
 const plays = [
   {

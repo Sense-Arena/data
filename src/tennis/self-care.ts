@@ -1,4 +1,4 @@
-import { RacketType } from './enums';
+import { RacketType } from './enums.js';
 
 const racket = [
   {
